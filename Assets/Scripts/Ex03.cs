@@ -8,18 +8,13 @@ public class Ex03 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("COUNTDOWN");
         Countdown();
     }
 
     private void Countdown() {
-        Debug.Log("COUNTDOWN");
         for ( ;countdownNum >= 0 ; countdownNum--) {
-            StartCoroutine(WaitTime());
             Debug.Log(countdownNum);
         }
-    }
-
-    private IEnumerator WaitTime() {
-        yield return new WaitForSeconds(3);
     }
 }
